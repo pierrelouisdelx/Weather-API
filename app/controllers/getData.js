@@ -5,8 +5,12 @@ const getCityData = async(cities, res) => {
     var data = [];
 
     const result = await db.getDb().collection("cities").find({city: { $in : cities }}).toArray();
-    for (r of result)
-        data.push(r.city_data);
+    for (let i = 0; i < result.length; i++)
+    {
+        console.log(result[i].city_data);
+        result[i].city_data.id = i;
+        data.push(result[i].city_data);
+    }
     res.json(data);
 }
 

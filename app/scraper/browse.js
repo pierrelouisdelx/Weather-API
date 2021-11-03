@@ -42,7 +42,7 @@ const browse = async(city_name, city_url, week_url, day_url) => {
         city_data.temperature = day_data[0].temperature;
         city_data.temp = week_data[0].temperature;
 
-        insert(city_name, city_url, week_url, day_url, [city_data], week_data, day_data);
+        insert(city_name, city_url, week_url, day_url, city_data, week_data, day_data);
 
         await browser.close();
 
