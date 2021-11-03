@@ -1,12 +1,13 @@
 const db = require("./db");
 db.connect();
 
-global.data = []
+const getCityData = async(cities, res) => {
+    var data = [];
 
-const getCityData = (cities, res) => {
-        db.getDb().collection("cities").find({city: { $in : cities }}, function(err, r) {
-            console.log(r);
-        });
+    const result = await db.getDb().collection("cities").find({city: { $in : cities }}).toArray();
+    for (r of result)
+        data.push(r.city_data);
+    res.json(data);
 }
 
 const getWeekData = (city, res) => {
