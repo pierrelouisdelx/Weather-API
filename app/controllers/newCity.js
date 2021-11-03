@@ -8,7 +8,7 @@ function newCity(city, city_url, week_url, link_url)
         city: city,
         city_url: city_url,
         week_url: week_url,
-        link_url: link_url,
+        day_url: link_url,
         city_data: [],
         week_data: [],
         day_data: [],
