@@ -17,7 +17,8 @@ app.get("/refresh", (req, res, next) => {
 });
 
 app.post("/city", (req, res, next) => {
-    data.getCityData(req.body.cities, res);
+    if (req.body.cities != null)
+        data.getCityData(req.body.cities, res);
 });
 
 app.get("/week/:city", (req, res, next) => {
@@ -29,6 +30,7 @@ app.get("/day/:city", (req, res, next) => {
 });
 
 app.get("/search/:city", (req, res, next) => {
+    console.log(req.params.city);
     search(req.params.city);
 });
 

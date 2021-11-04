@@ -7,7 +7,6 @@ const getCityData = async(cities, res) => {
     const result = await db.getDb().collection("cities").find({city: { $in : cities }}).toArray();
     for (let i = 0; i < result.length; i++)
     {
-        console.log(result[i].city_data);
         result[i].city_data.id = i;
         data.push(result[i].city_data);
     }
