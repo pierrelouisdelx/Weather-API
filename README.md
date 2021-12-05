@@ -28,6 +28,23 @@ node server.js
 
 ### City Data
 ``POST /city``
+```json
+    [
+        {
+            "city": "Paris",
+            "background": "http://192.168.1.93:3000/Paris.jpg",
+            "weather": "cloudy",
+            "weatherIcon": "weather-cloudy",
+            "wind": "W 13",
+            "tomorrowDay": "Mon",
+            "tomorrowIcon": "weather-cloudy",
+            "tomorrowTemp": "3°/7°",
+            "temperature": "6",
+            "temp": "4°/6°",
+            "id": 0
+        }
+    ]
+```
 
 ---
 
@@ -44,7 +61,8 @@ node server.js
 			"forecast": "Mainly cloudy, showers around",
 			"humidity": "87",
 			"id": 0
-		}
+		},
+        ...
 	]
 ```
 
@@ -63,7 +81,8 @@ node server.js
 			"forecast": "Cloudy",
 			"humidity": "47",
 			"id": 0
-		}
+		},
+        ...
 	]
 ```
 
