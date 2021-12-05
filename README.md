@@ -29,21 +29,21 @@ node server.js
 ### City Data
 ``POST /city``
 ```json
-    [
-        {
-            "city": "Paris",
-            "background": "http://192.168.1.93:3000/Paris.jpg",
-            "weather": "cloudy",
-            "weatherIcon": "weather-cloudy",
-            "wind": "W 13",
-            "tomorrowDay": "Mon",
-            "tomorrowIcon": "weather-cloudy",
-            "tomorrowTemp": "3°/7°",
-            "temperature": "6",
-            "temp": "4°/6°",
-            "id": 0
-        }
-    ]
+[
+    {
+        "city": "Paris",
+        "background": "http://192.168.1.93:3000/Paris.jpg",
+        "weather": "cloudy",
+        "weatherIcon": "weather-cloudy",
+        "wind": "W 13",
+        "tomorrowDay": "Mon",
+        "tomorrowIcon": "weather-cloudy",
+        "tomorrowTemp": "3°/7°",
+        "temperature": "6",
+        "temp": "4°/6°",
+        "id": 0
+    },
+]
 ```
 
 ---
@@ -52,18 +52,17 @@ node server.js
 ``GET /week/:city``
 #### Server Response :
 ```json
-	[
-		{
-			"weekDay": "Sun",
-			"date": "12/05",
-			"weatherIcon": "weather-rainy",
-			"temperature": "4°/6°",
-			"forecast": "Mainly cloudy, showers around",
-			"humidity": "87",
-			"id": 0
-		},
-        ...
-	]
+[
+    {
+        "weekDay": "Sun",
+        "date": "12/05",
+        "weatherIcon": "weather-rainy",
+        "temperature": "4°/6°",
+        "forecast": "Mainly cloudy, showers around",
+        "humidity": "87",
+        "id": 0
+    },
+]
 ```
 
 ---
@@ -72,18 +71,17 @@ node server.js
 ``GET /day/:city``
 #### Server Response :
 ```json
-	[
-		{
-			"weather": "cloudy",
-			"time": "12",
-			"weatherIcon": "weather-cloudy",
-			"temperature": "6",
-			"forecast": "Cloudy",
-			"humidity": "47",
-			"id": 0
-		},
-        ...
-	]
+[
+    {
+        "weather": "cloudy",
+        "time": "12",
+        "weatherIcon": "weather-cloudy",
+        "temperature": "6",
+        "forecast": "Cloudy",
+        "humidity": "47",
+        "id": 0
+    },
+]
 ```
 
 ---
