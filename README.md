@@ -37,13 +37,13 @@ node server.js
 ```json
 	[
 		{
-			'weekDay': 'Sun',
-			'date': '12/05',
-			'weatherIcon': 'weather-rainy',
-			'temperature': '4°/6°',
-			'forecast': 'Mainly cloudy, showers around',
-			'humidity': '87',
-			'id': 0
+			"weekDay": "Sun",
+			"date": "12/05",
+			"weatherIcon": "weather-rainy",
+			"temperature": "4°/6°",
+			"forecast": "Mainly cloudy, showers around",
+			"humidity": "87",
+			"id": 0
 		}
 	]
 ```
