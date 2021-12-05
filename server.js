@@ -17,8 +17,8 @@ app.get("/refresh", (req, res, next) => {
 });
 
 app.post("/city", (req, res, next) => {
-    if (req.body.cities != null)
-        data.getCityData(req.body.cities, res);
+    //if (req.body.cities != null)
+    data.getCityData(["Paris"], res);
 });
 
 app.get("/week/:city", (req, res, next) => {
