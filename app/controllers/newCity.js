@@ -1,6 +1,8 @@
 const db = require("./db");
 db.connect();
 
+const appendCity = require("./appendCity");
+
 function newCity(city, city_url, week_url, link_url)
 {
     var c = db.getDb().collection("cities");
@@ -19,6 +21,7 @@ function newCity(city, city_url, week_url, link_url)
                 day_data: [],
             }, (err, r) => {
                 if (err) throw err;
+                appendCity(city);
             });
         }
     });
