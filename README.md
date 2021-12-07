@@ -1,5 +1,5 @@
 ## Unofficial Weather API using accuweather.com
-This is an unofficial API made with NodeJS and MongoDB in order to be used with a React Native app that will be available very soon
+This is an unofficial API made with NodeJS and MongoDB in order to be used with a [my React Native App](https://github.com/Pierrelouisdelx/Weather)
 
 ## Prerequisites
 * NodeJS & npm

@@ -58,6 +58,53 @@ function getIcon(n)
     }
 }
 
+function getBg(weather)
+{
+    var url = "http://192.168.1.93:3000/";
+    switch(weather)
+    {
+        case 'weather-sunny':
+            url += "sunny.jpg";
+            break;
+        case 'weather-partly-cloudy':
+            break;
+        case 'weather-hazy':
+            break;
+        case 'weather-cloudy':
+            break;
+        case 'weather-fog':
+            break;
+        case 'weather-rainy':
+            url += "rainy.jpg";
+            break;
+        case 'weather-partly-rainy':
+            break;
+        case 'weather-lightning':
+            break;
+        case 'weather-partly-lightning':
+            break;
+        case 'weather-pouring':
+            break;
+        case 'weather-snowy':
+            break;
+        case 'weather-partly-snowy':
+            break;
+        case 'weather-snowy-heavy':
+            break;
+        case 'weather-hail':
+            break;
+        case 'weather-windy':
+            break;
+        case 'weather-night':
+            break;
+        case 'weather-night-partly-cloudy':
+            break;
+    }
+
+    return url;
+}
+
+
 const getWeek = (html) => {
     week = []
     try {
@@ -80,6 +127,8 @@ const getWeek = (html) => {
             img = img.split('.')[0];
             img = getIcon(img)
 
+            var bg = getBg(img)
+
             var temp = divs[i].find('div', 'temp')
             temp = temp.findAll('span')
             high = temp[0].text.split('&')[0]
@@ -92,6 +141,7 @@ const getWeek = (html) => {
             precip = precip.replace(/\s/g, '').split('%')[0]
 
             day = {
+                bg: bg,
                 weekDay: dow,
                 date: sub,
                 weatherIcon: img,
